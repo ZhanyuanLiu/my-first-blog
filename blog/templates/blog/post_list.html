@@ -1,31 +1,18 @@
 <html>
     <head>
-        <title>Zhanyuan Liu`s blog</title>
+        <title>Zhanuyan Liu's blog</title>
     </head>
     <body>
-        
         <div>
-
-            <h1><a href="/">Zhanyuan Liu's Blog</a></h1>
+            <h1><a href="/">Zhanuyan Liu's Blog</a></h1>
         </div>
 
+        {% for post in posts %}
         <div>
-
-            <p>Welcome!!!</p>
+            <p>published: {{ post.published_date }}</p>
+            <h1><a href="">{{ post.title }}</a></h1>
+            <p>{{ post.text|linebreaksbr }}</p>
         </div>
-
-        <div>
-            
-            <h2><a href="">My first post</a></h2>
-            <p>FIRST POST</p>
-            <p>published: 20.05.2020</p>
-        </div>
-
-        <div>
-            
-            <h2><a href="">My second post</a></h2>
-            <p>SECOND POST</p>
-            <p>published: 20.05.2020</p>
-        </div>
+    {% endfor %}
     </body>
 </html>
